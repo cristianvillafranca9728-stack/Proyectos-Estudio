@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -a 127.0.0.1 -p 3001 -c-1 -o",
     "sass:watch": "sass --watch scss/main.scss:css/main.css"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "http-server": "^14.1.1",
     "sass": "^1.102.0"
   }
 }

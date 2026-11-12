@@ -1,0 +1,11 @@
+{
+  "name": "transformers-bootstrap",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -a 127.0.0.1 -p 3002 -c-1 -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
