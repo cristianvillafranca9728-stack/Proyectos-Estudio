@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF70eKJR" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2family=Monserrat:wgth@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Quiero comprar un auto</title> <!-- Título que aparece en la pestaña del navegador -->
 </head>
-<body>
+<body class="page--showroom">
     <!--Encabezado de la página con menú de navegación -->
     <header class="header">
         <img class="header__logo" src="img/logo.png" alt="Logo"> 
@@ -23,8 +23,8 @@
     </header>
 
     <main>
-        <form> <!-- Inicia el formulario -->
-            <section>    <!-- Encabezado del formulario -->
+        <form class="registration-form"> <!-- Inicia el formulario -->
+            <section class="registration-form__intro">    <!-- Encabezado del formulario -->
                 <h1>Llena el siguiente formulario y un agente se contactará contigo para comenzar el proceso de compra.</h1>
             </section>
            
@@ -61,7 +61,7 @@
                 </section>
             </fieldset>
             
-            <fieldset> <!-- Tercer fieldset: datos personales -->
+            <fieldset class="registration-form__contact-fields"> <!-- Tercer fieldset: datos personales -->
                 <legend>Información de Contacto</legend> <!-- Título del grupo de campos de contacto -->
     
                 <section>
@@ -100,19 +100,19 @@
                 </section>
             </fieldset>
 
-            <section>  <!-- Checkbox para aceptar aviso de privacidad -->
+            <section class="registration-form__privacy">  <!-- Checkbox para aceptar aviso de privacidad -->
                 <input type="checkbox" id="privacidad" name="privacidad" required> <!-- Casilla que el usuario debe marcar para continuar -->
                 <label for="privacidad">He leído y acepto el Aviso de privacidad.</label>
             </section>  <!-- Botón para enviar el formulario -->
 
-            <section>
+            <section class="registration-form__actions">
                 <button type="submit" class="submit-button">
                     Enviar Formulario
                 </button>
             </section>
         </form>
     </main>
-    <section>
+    <section class="registration-contact">
         <h2>Para dudas y aclaraciones por favor contactanos</h2>
         <address>
             <p><strong>Telefono:</strong><a href="tel:55786932">55-7869-9932</a></p>
