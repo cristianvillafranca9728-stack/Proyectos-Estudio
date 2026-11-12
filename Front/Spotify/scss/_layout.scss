@@ -1,0 +1,127 @@
+.spotify-page {
+	display: grid;
+	grid-template-columns: 240px minmax(0, 1fr) 320px;
+	gap: 8px;
+	height: calc(100vh - 80px);
+}
+
+.sidebar,
+.main-content,
+.right-panel {
+	background-color: $color-panel;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+.player {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+	width: 100%;
+	height: 80px;
+	padding: 0 16px;
+	box-sizing: border-box;
+	background-color: $color-background;
+	z-index: 1;
+}
+
+@include respond-to(tablet) {
+	.spotify-page {
+		grid-template-columns: 240px minmax(0, 1fr);
+	}
+
+	.right-panel {
+		display: none;
+	}
+}
+
+@include respond-to(mobile) {
+	.spotify-page {
+		grid-template-columns: minmax(0, 1fr);
+		height: calc(100vh - 96px);
+	}
+
+	// Mayor especificidad: `.sidebar { display: flex }` de _components.scss se importa después y lo sobrescribiría.
+	.spotify-page .sidebar {
+		display: none;
+	}
+
+	// Mayor especificidad: _components.scss se importa después y lo sobrescribiría.
+	.main-content .artist-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		min-height: 240px;
+
+		&__info h2 {
+			font-size: 2.25rem;
+		}
+	}
+
+	// Mayor especificidad: _components.scss se importa después y lo sobrescribiría.
+	.main-content .song-list {
+		gap: 2px;
+	}
+
+	.main-content .song {
+		grid-template-columns: 24px minmax(0, 1fr) auto;
+		gap: 8px;
+		padding: 10px 8px;
+
+		.song__plays {
+			display: none;
+		}
+
+		.song__duration {
+			min-width: 36px;
+		}
+	}
+
+	// footer.player: más especificidad que `.player` de _components.scss, que se importa después.
+	footer.player {
+		height: 96px;
+		padding: 10px 16px;
+		flex-flow: row wrap;
+		align-content: center;
+		justify-content: space-between;
+		gap: 8px 12px;
+
+		.player__volume {
+			display: none;
+		}
+
+		.player__song {
+			flex: 0 1 auto;
+			min-width: 0;
+
+			strong,
+			span {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+
+		.player__thumbnail {
+			flex: 0 0 40px;
+			width: 40px;
+			height: 40px;
+		}
+
+		// Los hijos pasan a ser items del player: botones arriba a la derecha y progreso abajo.
+		.player__controls {
+			display: contents;
+		}
+
+		.player__buttons {
+			flex: 1 1 auto;
+			justify-content: flex-end;
+			gap: 4px;
+		}
+
+		.player__progress {
+			flex: 0 0 100%;
+		}
+	}
+}

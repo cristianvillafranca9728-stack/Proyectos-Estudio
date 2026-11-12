@@ -1,0 +1,15 @@
+@function spacing($base, $multiplier) {
+	@return $base * $multiplier;
+}
+
+@mixin respond-to($device) {
+	@if $device == tablet {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	} @else if $device == mobile {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+}

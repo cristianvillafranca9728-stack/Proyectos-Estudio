@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página se adapte correctamente a celulares y tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Texto que aparece en la pestaña del navegador -->
+    <title>Spotify - Práctica EBAC</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- CONTENEDOR PRINCIPAL DE TODA LA PÁGINA -->
+ 
+    <div class="spotify-page">
+
+        <!-- MENÚ LATERAL IZQUIERDO -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar__top">
+
+            <div class="sidebar__logo">
+                <h1>Spotify</h1>
+            </div>
+
+            <nav class="sidebar__navigation">
+
+                <ul>
+                    <li><i class="fa-solid fa-house" aria-hidden="true"></i> Inicio</li>
+                    <li><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Buscar</li>
+                </ul>
+
+            </nav>
+
+            </div>
+
+            <!-- Lista de artistas o playlists -->
+            <div class="sidebar__library">
+
+                <div class="sidebar__library-header">
+
+                    <h2><i class="fa-solid fa-book" aria-hidden="true"></i> Tu biblioteca</h2>
+
+                    <div class="sidebar__library-actions">
+                        <button type="button" aria-label="Crear"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+                        <button type="button" aria-label="Expandir"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+
+                </div>
+
+                <div class="sidebar__filters">
+                    <button type="button" class="sidebar__filter-clear" aria-label="Quitar filtro"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                    <button type="button" class="sidebar__filter-tag">Artistas</button>
+                </div>
+
+                <div class="sidebar__controls">
+                    <button type="button" aria-label="Buscar en la biblioteca"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+                    <button type="button">Orden alfabético <i class="fa-solid fa-list" aria-hidden="true"></i></button>
+                </div>
+
+                <ul>
+                    <li><img class="sidebar__artist-image" src="assets/images/the-neighbourhood.jpg" alt=""><span>The Neighbourhood</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/coldplay.jpg" alt=""><span>Coldplay</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/Arctic-Monkeys.webp" alt=""><span>Arctic Monkeys</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/avicii.jpg" alt=""><span>Avicii</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/Belanova.webp" alt=""><span>Belanova</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/billie-eilish.jpg" alt=""><span>Billie Eilish</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/Evanescence.jpg" alt=""><span>Evanescence</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/imagine-dragons.jpg" alt=""><span>Imagine Dragons</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/interpol.jpg" alt=""><span>Interpol</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/Tiesto.webp" alt=""><span>Tiësto</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/rammstein.webp" alt=""><span>Rammstein</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/maroon-5.webp" alt=""><span>Maroon 5</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/the-killers.webp" alt=""><span>The Killers</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/lana-del-rey.webp" alt=""><span>Lana Del Rey</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/the-weeknd.png" alt=""><span>The Weeknd</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/bruno-mars.jpg" alt=""><span>Bruno Mars</span></li>
+                    <li><img class="sidebar__artist-image" src="assets/images/queen.jpg" alt=""><span>Queen</span></li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABECERA DEL ARTISTA -->
+
+            <header class="artist-header">
+
+                <!-- NAVEGACIÓN SUPERIOR -->
+
+                <nav class="main-content__nav" aria-label="Navegación">
+
+                    <button type="button" aria-label="Atrás">
+                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" aria-label="Adelante">
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+
+                </nav>
+
+                <!-- CONTROLES SUPERIORES DERECHOS -->
+
+                <div class="artist-header__tools">
+
+                    <button type="button" class="artist-header__install">
+                        <i class="fa-solid fa-circle-down" aria-hidden="true"></i> Instalar app
+                    </button>
+
+                    <button type="button" class="artist-header__icon-button" aria-label="Novedades">
+                        <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" class="artist-header__avatar" aria-label="Perfil">
+                        <img src="assets/images/linkin-park.jpg" alt="">
+                    </button>
+
+                </div>
+
+                <!-- Información del artista -->
+                <div class="artist-header__info">
+
+                    <p class="artist-header__verified">
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Artista verificado
+                    </p>
+
+                    <h2>Linkin Park</h2>
+
+                    <p>25.412.870 oyentes mensuales</p>
+
+                </div>
+
+            </header>
+
+            <!-- BOTONES DEL ARTISTA -->
+
+            <section class="artist-actions">
+
+                <button type="button" aria-label="Reproducir">
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                </button>
+
+                <button type="button">
+                    Seguir
+                </button>
+
+                <button type="button" class="artist-actions__more" aria-label="Más opciones">
+                    <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+                </button>
+
+            </section>
+
+            <!-- CANCIONES POPULARES -->
+            
+            <section class="popular-songs">
+
+                <h2>Populares</h2>
+
+
+                <!-- Lista de canciones -->
+                <div class="song-list">
+
+
+                    <!-- UNA CANCIÓN -->
+                    <article class="song">
+
+                        <span class="song__number">
+                            1
+                        </span>
+
+                        <div class="song__info">
+
+                            <img class="song__thumbnail" src="assets/images/Hybrid-Theory.webp" alt="">
+
+                            <h3>In the End</h3>
+
+                            <p>Linkin Park</p>
+
+                        </div>
+
+                        <span class="song__plays">
+                            1,500,000,000
+                        </span>
+
+                        <span class="song__duration">
+                            3:36
+                        </span>
+
+                    </article>
+
+
+                    <!-- OTRA CANCIÓN -->
+                    <article class="song">
+
+                        <span class="song__number">
+                            2
+                        </span>
+
+                        <div class="song__info">
+
+                            <img class="song__thumbnail" src="assets/images/meteora.webp" alt="">
+
+                            <h3>Numb</h3>
+
+                            <p>Linkin Park</p>
+
+                        </div>
+
+                        <span class="song__plays">
+                            1,200,000,000
+                        </span>
+
+                        <span class="song__duration">
+                            3:07
+                        </span>
+
+                    </article>
+
+
+                    <!-- OTRA CANCIÓN -->
+                    <article class="song">
+
+                        <span class="song__number">
+                            3
+                        </span>
+
+                        <div class="song__info">
+
+                            <img class="song__thumbnail" src="assets/images/Hybrid-Theory.webp" alt="">
+
+                            <h3>Crawling</h3>
+
+                            <p>Linkin Park</p>
+
+                        </div>
+
+                        <span class="song__plays">
+                            700,000,000
+                        </span>
+
+                        <span class="song__duration">
+                            3:29
+                        </span>
+
+                    </article>
+
+
+                    <!-- OTRA CANCIÓN -->
+                    <article class="song">
+
+                        <span class="song__number">
+                            4
+                        </span>
+
+                        <div class="song__info">
+
+                            <img class="song__thumbnail" src="assets/images/meteora.webp" alt="">
+
+                            <h3>Faint</h3>
+
+                            <p>Linkin Park</p>
+
+                        </div>
+
+                        <span class="song__plays">
+                            650,000,000
+                        </span>
+
+                        <span class="song__duration">
+                            2:42
+                        </span>
+
+                    </article>
+
+
+                    <!-- OTRA CANCIÓN -->
+                    <article class="song">
+
+                        <span class="song__number">
+                            5
+                        </span>
+
+                        <div class="song__info">
+
+                            <img class="song__thumbnail" src="assets/images/Minutes-to-Midnight.jpg" alt="">
+
+                            <h3>What I've Done</h3>
+
+                            <p>Linkin Park</p>
+
+                        </div>
+
+                        <span class="song__plays">
+                            600,000,000
+                        </span>
+
+                        <span class="song__duration">
+                            3:25
+                        </span>
+
+                    </article>
+
+                </div>
+
+                <a class="popular-songs__more" href="#">Ver más</a>
+
+            </section>
+
+            <!-- DISCOGRAFÍA -->
+
+            <section class="discography">
+
+                <div class="discography__header">
+
+                    <h2>Discografía</h2>
+
+                    <a href="#">Mostrar todo</a>
+
+                </div>
+
+                <div class="discography__filters">
+
+                    <button type="button" class="discography__filter discography__filter--active">Lanzamientos populares</button>
+                    <button type="button" class="discography__filter">Álbumes</button>
+                    <button type="button" class="discography__filter">Sencillos y EP</button>
+                    <button type="button" class="discography__filter">Compilaciones</button>
+
+                </div>
+
+                <div class="discography__albums">
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/Hybrid-Theory.webp" alt="Portada de Hybrid Theory">
+                        <h3>Hybrid Theory</h3>
+                        <p>2000 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/meteora.webp" alt="Portada de Meteora">
+                        <h3>Meteora</h3>
+                        <p>2003 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/Minutes-to-Midnight.jpg" alt="Portada de Minutes to Midnight">
+                        <h3>Minutes to Midnight</h3>
+                        <p>2007 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/A-Thousand-Suns.jpg" alt="Portada de A Thousand Suns">
+                        <h3>A Thousand Suns</h3>
+                        <p>2010 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/LIVING-THINGS.jpg" alt="Portada de LIVING THINGS">
+                        <h3>LIVING THINGS</h3>
+                        <p>2012 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/The-Hunting-Party.jpg" alt="Portada de The Hunting Party">
+                        <h3>The Hunting Party</h3>
+                        <p>2014 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/One-More-Light.jpg" alt="Portada de One More Light">
+                        <h3>One More Light</h3>
+                        <p>2017 • Álbum</p>
+                    </article>
+
+                    <article class="album">
+                        <img class="album__cover" src="assets/images/From-Zero.jpg" alt="Portada de From Zero">
+                        <h3>From Zero</h3>
+                        <p>2024 • Álbum</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- PANEL DERECHO -->
+        <aside class="right-panel">
+
+            <div class="right-panel__header">
+
+                <h2>Linkin Park</h2>
+
+                <button type="button" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <!-- Portada del álbum -->
+            <div class="right-panel__album">
+
+                <img
+                    src="assets/images/meteora.webp"
+                    alt="Portada del álbum Meteora de Linkin Park"
+                >
+
+            </div>
+
+
+            <!-- Información de la canción -->
+            <div class="right-panel__info">
+
+                <div class="right-panel__song">
+
+                    <h3>Numb</h3>
+
+                    <p>Linkin Park</p>
+
+                </div>
+
+                <div class="right-panel__actions">
+
+                    <button type="button" aria-label="Me gusta">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    </button>
+
+                    <button type="button" aria-label="Más opciones">
+                        <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Información sobre el artista -->
+            <div class="right-panel__artist">
+
+                <div class="right-panel__artist-cover">
+
+                    <img
+                        src="assets/images/Linkin-Park-new.jpg"
+                        alt="Linkin Park"
+                    >
+
+                    <h4>Información sobre el artista</h4>
+
+                </div>
+
+                <div class="right-panel__artist-body">
+
+                    <div class="right-panel__artist-row">
+
+                        <div>
+
+                            <h5>Linkin Park</h5>
+
+                            <p>25.412.870 oyentes mensuales</p>
+
+                        </div>
+
+                        <button type="button">Seguir</button>
+
+                    </div>
+
+                    <p class="right-panel__artist-description">
+                        Banda estadounidense de rock formada en Agoura Hills,
+                        California, en 1996. Combina rock alternativo, nu metal
+                        y elementos electrónicos, y es conocida por álbumes
+                        como Hybrid Theory y Meteora.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+    </div>
+
+    <!-- REPRODUCTOR INFERIOR -->
+
+    <footer class="player">
+
+        <!-- Canción actual -->
+        <div class="player__song">
+
+            <img class="player__thumbnail" src="assets/images/let-you-down.jpg" alt="Portada de Let You Down">
+
+            <div class="player__song-info">
+
+                <strong>Let You Down</strong>
+
+                <span>Dawid Podsiadło</span>
+
+            </div>
+
+            <button type="button" class="player__like" aria-label="Me gusta">
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Controles -->
+        <div class="player__controls">
+
+            <div class="player__buttons">
+
+                <button type="button" aria-label="Aleatorio">
+                    <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" aria-label="Anterior">
+                    <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" class="player__play" aria-label="Pausa">
+                    <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" aria-label="Siguiente">
+                    <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" aria-label="Repetir">
+                    <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <div class="player__progress">
+
+                <span>0:15</span>
+
+                <div class="player__bar">
+                    <div class="player__bar-fill"></div>
+                </div>
+
+                <span>3:47</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Volumen y controles secundarios -->
+        <div class="player__volume">
+
+            <button type="button" aria-label="Letra">
+                <i class="fa-solid fa-microphone-lines" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" aria-label="Cola">
+                <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" aria-label="Dispositivos">
+                <i class="fa-solid fa-laptop" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" aria-label="Volumen">
+                <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+            </button>
+
+            <div class="player__bar player__bar--volume">
+                <div class="player__bar-fill"></div>
+            </div>
+
+            <button type="button" aria-label="Miniplayer">
+                <i class="fa-solid fa-window-restore" aria-hidden="true"></i>
+            </button>
+
+            <button type="button" aria-label="Pantalla completa">
+                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+            </button>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

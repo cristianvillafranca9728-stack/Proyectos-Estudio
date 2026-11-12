@@ -1,0 +1,84 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es">  <!-- Establece el idioma del contenido como español -->
+<head> 
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Configura el diseño para que sea responsive -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Compra de Autos Seminuevos</title> <!-- Título que aparece en la pestaña del navegador -->
+</head>
+<body>
+    <!--Encabezado de la página con menú de navegación -->
+    <header class="header">
+        <img class="header__logo" src="img/logo.png" alt="Logo"> 
+        <nav class="header__nav"> <!-- Navegacion principal del sitio-->
+            <a href="index.html" class="header__link header__link--active">Inicio</a>
+            <a href="catalog.html" class="header__link header__link">Catalogo</a>
+            <a href="forms.html" class="header__link header__link">Registro</a>
+            <a href="news.html" class="header__link header__link">Noticias</a>
+        </nav>
+    </header>
+
+    <!--Contenido principal-->
+    <main class="main-content"> 
+        <section class="hero"> 
+            <h1 class="hero__title">AutoClick</h1>  
+            <p class="hero__text">Encuentra los mejores <span class="hero__highlight">precios y calidad garantizada.</span></p> 
+            <div class="hero__actions">
+                <a href="catalog.html" class="hero__link">Ver catálogo completo</a>
+            </div>
+        </section>
+       
+        <section class="steps"> 
+            <h2 class="steps__title">Pasos para comprar tu auto seminuevo</h2> 
+            <ol class="steps__list"> 
+                <li class="steps__item">Consulta nuestro catálogo y elige tu auto favorito.</li>
+                <li class="steps__item">Agenda una cita para conocer el vehículo.</li>
+                <li class="steps__item">Revisa el historial y condiciones del auto.</li>
+                <li class="steps__item">Realiza la prueba de manejo.</li>
+                <li class="steps__item">Formaliza la compra con nuestro asesor.</li>
+            </ol>
+        </section>
+        
+        <section class="brands"> 
+            <h2 class="brands__title">Trabajamos con distintas marcas de autos</h2> 
+            <ul class="brands__list"> 
+                <li class="brands__item">Mazda</li>
+                <li class="brands__item">Alfa Romeo</li>
+                <li class="brands__item">Toyota</li>
+                <li class="brands__item">Honda</li>
+                <li class="brands__item">Ford</li>
+                <li class="brands__item">Chevrolet</li>
+            </ul>
+        </section>
+        
+        <section class="benefits">  
+            <h2 class="benefits__title">¿Por qué comprar un seminuevo?</h2> 
+            <a href="..." class="benefits__link">Conoce las ventajas y desventajas</a>
+            <img src="img/civic25.jpg" alt="Honda civic 2025" class="benefits__img"> 
+        </section>
+       
+        <section class="cta-contact">  
+            <h2 class="cta-contact__title">¿Necesita información sobre algún vehículo?</h2>  
+            <a href="forms.html" class="cta-contact__btn">Contáctanos</a> 
+        </section>
+       
+        <aside class="news-snippet"> 
+            <strong class="news-snippet__label">Conoce las noticias del día</strong> 
+            <a href="news.html" class="news-snippet__link">click aquí para conocer más</a>
+        </aside>
+    </main>
+
+    <!-- Pie de página con información legal o de contacto -->
+    <footer>
+        <p>&copy; 2024 AutoClick</p>
+        <nav>
+            <a href="#">Privacidad</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </footer>
+</body>
+</html>
